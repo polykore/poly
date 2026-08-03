@@ -1,4 +1,6 @@
-![poly logo](https://github.com/polykore/poly/blob/main/Poly%20Logo%20-%202048x2048%20Hi-Res.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/polykore/poly/main/Poly%20Logo%20-%202048x2048%20Hi-Res.png" width="180" alt="poly logo" />
+</p>
 
 # poly
 
