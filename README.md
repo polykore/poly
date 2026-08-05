@@ -13,6 +13,7 @@
 * **sudo & native linux commands** — seamless integration with standard linux binaries and system commands.
 * **clean UI** — minimalist layout designed to keep your workspace clutter-free.
 * **customizable terminal** — tailor the visual style and workflow to match your setup.
+**high efficiency** made primarily in rust and c# for max performance 
 
 ---
 
