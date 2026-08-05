@@ -1,0 +1,41 @@
+# build and compilation output
+bin/
+obj/
+build/
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.dll
+*.winmd
+*.xbf
+*.pri
+*.deps.json
+*.runtimeconfig.json
+*.pdb
+terminal_settings.json
+RestartAgent.exe
+
+# temp and sys generated files
+.internal/
+.system_generated/
+*.tmp
+*.log
+crash.log
+app_icon.ico
+*.cache
+input.json
+output.json
+
+# pyinstaller specs
+*.spec
+
+# visual studio and IDE caches
+.vs/
+.idea/
+.vscode/
+*.user
+*.userosv
+*.suo
+*.userprefs

@@ -1,0 +1,8 @@
+{
+    "theme": "dark",
+    "background": "#000000",
+    "foreground": "#FFFFFF",
+    "cursor": "#FFFFFF",
+    "font": "Consolas",
+    "font_size": 12
+}

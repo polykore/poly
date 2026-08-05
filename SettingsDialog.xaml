@@ -1,0 +1,91 @@
+<ContentDialog
+    x:Class="PolyTerminal.SettingsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Terminal Preferences"
+    PrimaryButtonText="Close"
+    DefaultButton="Primary">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="480">
+        <StackPanel Spacing="16" Width="360" Margin="0,8,12,0">
+            
+            <!-- privileges &amp; elevation -->
+            <TextBlock Text="privileges &amp; elevation" FontWeight="SemiBold" FontSize="14" Foreground="#58A6FF"/>
+            
+            <Grid ColumnDefinitions="*,Auto" Margin="0,0,0,4">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Auto-Sudo Mode" FontSize="13" Foreground="#C9D1D9" FontWeight="Medium"/>
+                    <TextBlock Text="Relaunches terminal with elevated Admin rights for all commands" FontSize="11" Foreground="#8B949E" TextWrapping="Wrap" MaxWidth="240"/>
+                </StackPanel>
+                <ToggleSwitch x:Name="AutoSudoToggle" Grid.Column="1" Toggled="AutoSudoToggle_Toggled" OffContent="" OnContent=""/>
+            </Grid>
+
+            <!-- text auto-scrolling -->
+            <TextBlock Text="text auto-scrolling" FontWeight="SemiBold" FontSize="14" Foreground="#58A6FF" Margin="0,8,0,0"/>
+            
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Text="Enable Smooth Auto-Scroll" FontSize="13" Foreground="#C9D1D9" VerticalAlignment="Center"/>
+                <ToggleSwitch x:Name="AutoScrollToggle" Grid.Column="1" IsOn="True" Toggled="AutoScrollToggle_Toggled" OffContent="" OnContent=""/>
+            </Grid>
+
+            <StackPanel Spacing="4">
+                <Grid ColumnDefinitions="*,Auto">
+                    <TextBlock Text="Scroll Speed:" FontSize="12" Foreground="#8B949E"/>
+                    <TextBlock x:Name="SpeedLabel" Grid.Column="1" Text="5" FontSize="12" Foreground="#58A6FF" FontWeight="SemiBold"/>
+                </Grid>
+                <Slider x:Name="ScrollSpeedSlider" Minimum="1" Maximum="10" Value="5" ValueChanged="ScrollSpeedSlider_ValueChanged"/>
+            </StackPanel>
+
+            <!-- colors & theme -->
+            <TextBlock Text="colors &amp; styling" FontWeight="SemiBold" FontSize="14" Foreground="#58A6FF" Margin="0,8,0,0"/>
+            
+            <StackPanel Spacing="6">
+                <TextBlock Text="text color:" FontSize="13" Foreground="#C9D1D9"/>
+                <ComboBox x:Name="TextColorCombo" SelectionChanged="TextColorCombo_SelectionChanged" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="Default Ice White (#E6EDF3)"/>
+                    <ComboBoxItem Content="Hacker Matrix Green (#3FB950)"/>
+                    <ComboBoxItem Content="Electric Cyber Blue (#58A6FF)"/>
+                    <ComboBoxItem Content="Neon Sunset Red (#FF7B72)"/>
+                    <ComboBoxItem Content="Violet Synthwave (#D2A8FF)"/>
+                    <ComboBoxItem Content="Gold Amber (#FFA657)"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Font Size:" FontSize="13" Foreground="#C9D1D9"/>
+                <ComboBox x:Name="FontSizeCombo" SelectionChanged="FontSizeCombo_SelectionChanged" HorizontalAlignment="Stretch" SelectedIndex="1">
+                    <ComboBoxItem Content="11px (Compact)"/>
+                    <ComboBoxItem Content="13px (Default)"/>
+                    <ComboBoxItem Content="15px (Medium)"/>
+                    <ComboBoxItem Content="18px (Large)"/>
+                    <ComboBoxItem Content="20px (Extra Large)"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Prompt Style:" FontSize="13" Foreground="#C9D1D9"/>
+                <ComboBox x:Name="PromptStyleCombo" SelectionChanged="PromptStyleCombo_SelectionChanged" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="Default (user@terminal:~ ❯)"/>
+                    <ComboBoxItem Content="Minimal (➜ ~/folder)"/>
+                    <ComboBoxItem Content="PowerLine (⚡ admin@poly ❯)"/>
+                    <ComboBoxItem Content="Classic Linux ([poly-engine]:$)"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="System Glass Backdrop:" FontSize="13" Foreground="#C9D1D9"/>
+                <ComboBox x:Name="BackdropCombo" SelectionChanged="BackdropCombo_SelectionChanged" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="Mica (Default Win11 Glass)"/>
+                    <ComboBoxItem Content="Desktop Acrylic"/>
+                    <ComboBoxItem Content="Solid Pitch Black"/>
+                </ComboBox>
+            </StackPanel>
+
+            <!-- keyboard shortcuts -->
+            <TextBlock Text="shortcuts" FontWeight="SemiBold" FontSize="14" Foreground="#58A6FF" Margin="0,8,0,0"/>
+            <TextBlock Text="Ctrl + Alt + S : settings dialog" FontSize="12" Foreground="#8B949E"/>
+            <TextBlock Text="Ctrl + Shift + T : new terminal tab" FontSize="12" Foreground="#8B949E"/>
+            <TextBlock Text="up / down arrows : command history navigation" FontSize="12" Foreground="#8B949E"/>
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>
