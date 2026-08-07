@@ -3,12 +3,13 @@
 </p>
 
 # poly
+### pre-release (3CB70)
 
 > a clean, customizable linux-based Windows terminal built for speed and minimal aesthetics.
 
 ---
 
-## 🚀 features (v1.0)
+## 🚀 features (v0.9)
 
 * **sudo & native linux commands** — seamless integration with standard linux binaries and system commands.
 * **clean UI** — minimalist layout designed to keep your workspace clutter-free.
@@ -19,7 +20,7 @@
 
 ## 📌 roadmap
 
-* [x] **v1.0** — core engine, execution environment, & baseline UI setup.
+* [x] **v0.9/1.0** — core engine, execution environment, & baseline UI setup.
 * [ ] **v2.0** — *coming soon* (expanded customizability, enhanced scripting support & performance optimizations).
 
 ---
